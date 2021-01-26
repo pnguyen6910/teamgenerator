@@ -1,6 +1,6 @@
 // TODO: Write code to define and export the Employee class
 class Employee {
-    constructor(name, id, email, role) {
+    constructor(name, id, email) {
         this.name = name
         this.id = id
         this.email = email
@@ -20,10 +20,10 @@ class Employee {
     }
 
     getRole() {
-        return "Employee"
+        return this.role
     }
 }
 
-// let paul = new Employee('paul', 1, 'email@email.com', 'employee')
-// console.log(paul)
+let paul = new Employee('paul', 1, 'email@email.com', 'employee')
+console.log(paul)
 module.exports = Employee;

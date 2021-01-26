@@ -18,4 +18,3 @@ class Engineer extends Employee {
 
 // let paul = new Employee('paul', 1, 'email@email.com', 'employee', pnguyen6910)
 // console.log(paul)
-module.exports = Engineer;

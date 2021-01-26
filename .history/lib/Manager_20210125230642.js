@@ -8,12 +8,13 @@ class Manager extends Employee {
     }
 
     getRole() {
-        return this.role
+        return "Manager"
     }
 
-    getOfficeNumber() {
+    getOffice() {
         return this.officeNumber
     }
 }
 
-module.exports = Manager;
+let paul = new Employee('paul', 1, 'email@email.com', 'employee', 101)
+console.log(paul)

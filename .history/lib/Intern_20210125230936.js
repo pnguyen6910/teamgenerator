@@ -8,7 +8,7 @@ class Intern extends Employee {
     }
 
     getRole() {
-        return this.role
+        return "Intern"
     }
 
     getSchool() {
@@ -18,4 +18,3 @@ class Intern extends Employee {
 
 // let paul = new Employee('paul', 1, 'email@email.com', 'employee', 'nw')
 // console.log(paul)
-module.exports = Intern;

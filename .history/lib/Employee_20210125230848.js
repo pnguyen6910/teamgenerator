@@ -24,6 +24,6 @@ class Employee {
     }
 }
 
-// let paul = new Employee('paul', 1, 'email@email.com', 'employee')
-// console.log(paul)
+let paul = new Employee('paul', 1, 'email@email.com', 'employee')
+console.log(paul)
 module.exports = Employee;
