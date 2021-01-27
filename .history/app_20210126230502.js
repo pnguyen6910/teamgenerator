@@ -10,7 +10,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-var team = [];
+var team = []
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
@@ -32,13 +32,15 @@ const manager = inquirer.prompt([
         message: "What is your email?"
     },
     {
-        name: "officeNum",
+        name: "officenum",
         type: "input",
         message: "What is your office number?"
     }
-]).then(res => {
-    const manager = new Manager(res.name, res.id, res.email, res.officeNum)
-}
+]).then((data) => {
+    const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
+
+    fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
+        err ? console.log(err) : console.log('Success!')
     );
 });
 }
