@@ -14,7 +14,7 @@ var team = [];
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
-function generateEmployeeM() {
+function generateEmployee() {
     const generateManager = inquirer.prompt([
         {
             name: "name",
@@ -39,11 +39,10 @@ function generateEmployeeM() {
     ]).then(res => {
         const manager = new Manager(res.name, res.id, res.email, res.officeNum)
         team.push(manager)
-        generateEmployeeE()
         });
 }
-function generateEmployeeE() {
-    const generateEngineer = inquirer.prompt([
+function generateEmployee() {
+    const generateManager = inquirer.prompt([
         {
             name: "name",
             type: "input",
@@ -60,17 +59,16 @@ function generateEmployeeE() {
             message: "What is your email?"
         },
         {
-            name: "gitHub",
+            name: "officeNum",
             type: "input",
-            message: "What is your github username?"
+            message: "What is your office number?"
         }
     ]).then(res => {
-        const engineer = new Engineer(res.name, res.id, res.email, res.gitHub)
-        team.push(engineer)
-        generateEmployeeI()
+        const manager = new Manager(res.name, res.id, res.email, res.officeNum)
+        team.push(manager)
         });
 }
-function generateEmployeeI() {
+function generateEmployee() {
     const generateIntern = inquirer.prompt([
         {
             name: "name",
@@ -94,7 +92,7 @@ function generateEmployeeI() {
         }
     ]).then(res => {
         const intern = new Intern(res.name, res.id, res.email, res.school)
-        team.push(Intern)
+        team.push(manager)
         });
 }
 
@@ -118,4 +116,3 @@ function generateEmployeeI() {
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
-generateEmployeeM()

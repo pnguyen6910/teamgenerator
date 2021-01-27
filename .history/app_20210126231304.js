@@ -14,7 +14,7 @@ var team = [];
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
-function generateEmployeeM() {
+function generateEmployee() {
     const generateManager = inquirer.prompt([
         {
             name: "name",
@@ -39,65 +39,10 @@ function generateEmployeeM() {
     ]).then(res => {
         const manager = new Manager(res.name, res.id, res.email, res.officeNum)
         team.push(manager)
-        generateEmployeeE()
+        engineer()
         });
 }
-function generateEmployeeE() {
-    const generateEngineer = inquirer.prompt([
-        {
-            name: "name",
-            type: "input",
-            message: "What is your name?"
-        },
-        {
-            name: "id",
-            type: "number",
-            message: "What is your ID number?"
-        },
-        {
-            name: "email",
-            type: "input",
-            message: "What is your email?"
-        },
-        {
-            name: "gitHub",
-            type: "input",
-            message: "What is your github username?"
-        }
-    ]).then(res => {
-        const engineer = new Engineer(res.name, res.id, res.email, res.gitHub)
-        team.push(engineer)
-        generateEmployeeI()
-        });
-}
-function generateEmployeeI() {
-    const generateIntern = inquirer.prompt([
-        {
-            name: "name",
-            type: "input",
-            message: "What is your name?"
-        },
-        {
-            name: "id",
-            type: "number",
-            message: "What is your ID number?"
-        },
-        {
-            name: "email",
-            type: "input",
-            message: "What is your email?"
-        },
-        {
-            name: "school",
-            type: "input",
-            message: "What is your school?"
-        }
-    ]).then(res => {
-        const intern = new Intern(res.name, res.id, res.email, res.school)
-        team.push(Intern)
-        });
-}
-
+function 
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
@@ -118,4 +63,3 @@ function generateEmployeeI() {
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
-generateEmployeeM()

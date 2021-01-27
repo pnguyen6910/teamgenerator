@@ -39,7 +39,7 @@ function generateEmployeeM() {
     ]).then(res => {
         const manager = new Manager(res.name, res.id, res.email, res.officeNum)
         team.push(manager)
-        generateEmployeeE()
+        generateEmployeeE
         });
 }
 function generateEmployeeE() {
@@ -67,7 +67,7 @@ function generateEmployeeE() {
     ]).then(res => {
         const engineer = new Engineer(res.name, res.id, res.email, res.gitHub)
         team.push(engineer)
-        generateEmployeeI()
+        generateEmployeeI
         });
 }
 function generateEmployeeI() {
@@ -94,7 +94,7 @@ function generateEmployeeI() {
         }
     ]).then(res => {
         const intern = new Intern(res.name, res.id, res.email, res.school)
-        team.push(Intern)
+        team.push(engineer)
         });
 }
 
