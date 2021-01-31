@@ -17,10 +17,10 @@ var team = [];
 
 function start() {
     const start = inquirer.prompt([
-        {name: "mainMenu",
+        name: "mainMenu",
         type: "list",
         messege: "What kind of employee would you like to enter?",
-        choices: ["Manager", "Engineer", "Intern"]}
+        choices: ["Manager", "Engineer", "Intern"]
     ])
     function generateEmployeeM() {
         const generateManager = inquirer.prompt([
@@ -75,7 +75,7 @@ function start() {
         ]).then(res => {
             const engineer = new Engineer(res.name, res.id, res.email, res.gitHub)
             team.push(engineer)
-            start()
+            generateEmployeeI()
             });
     }
     function generateEmployeeI() {
@@ -103,7 +103,6 @@ function start() {
         ]).then(res => {
             const intern = new Intern(res.name, res.id, res.email, res.school)
             team.push(Intern)
-            start()
             });
     }
 }

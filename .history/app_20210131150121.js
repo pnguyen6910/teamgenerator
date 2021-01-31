@@ -17,10 +17,10 @@ var team = [];
 
 function start() {
     const start = inquirer.prompt([
-        {name: "mainMenu",
+        name: "mainMenu",
         type: "list",
         messege: "What kind of employee would you like to enter?",
-        choices: ["Manager", "Engineer", "Intern"]}
+        choices: ["Manager", "Engineer", "Intern"]
     ])
     function generateEmployeeM() {
         const generateManager = inquirer.prompt([
