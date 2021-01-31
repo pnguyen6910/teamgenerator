@@ -14,7 +14,6 @@ var team = [];
 
 
 function start() {
-    console.log("Build your team.")
     const start = inquirer.prompt([
         {
         name: "mainMenu",
